@@ -274,4 +274,12 @@ input {
   #intro {
     background: #444444;
   }
+  .contact-card {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  .info-col {
+    padding: 0%;
+  }
 }
