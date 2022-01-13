@@ -31,7 +31,7 @@
                 // generate a five digit number for the contact_number variable
                 this.contact_number.value = Math.random() * 100000 | 0;
                 // these IDs from the previous steps
-                emailjs.sendForm('cv_email_services', 'cv_email_services', this)
+                emailjs.sendForm('cv_services', 'cv_services', this)
                     .then(function() {
                         console.log('SUCCESS!');
                     }, function(error) {
@@ -60,27 +60,61 @@
         </nav>        
     </div>
     <section id="contact">
-        <div class="card contact-card">
-            <h1 class="title">Contact Me!</h1>
-            <form id="contact-form">
-                <input type="hidden" name="contact_number">
-                <div class="mb-3">
-                    <label for="from_name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="from_name" name="from_name">
+        
+        <div class="contact-card">
+            <h1 >Contact <span>Me!</span></h1>
+            <div class="row">
+                <div class="info-col col-lg-4">
+                    <div class="card info-card">
+                        <i class="info-icon fas fa-phone"></i>
+                        <p>(713)513-0055</p>
+                    </div>
+                    <div class="card info-card">
+                        <i class="info-icon fas fa-envelope"></i>
+                        <p>rodrigomariaca@hotmail.com</p>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="from_email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="from_email" name="from_email">
+                <div class="info-col col"> 
+                    <h4 class="contact-title">How can I <span>help you?</span></h4>                   
+                    <form id="contact-form" class="needs-validation" novalidate>
+                        <div class="row">
+                            <div class="info-col col-lg-6">
+                                <input type="hidden" name="contact_number">
+                                <div class="mb-3">
+                                    <input type="text" class="contact-input form-control" id="from_name" name="from_name" placeholder="Full Name" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your name
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="contact-input form-control" id="from_email" name="from_email" placeholder="Email Address" required>
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="contact-input form-control" id="from_subject" name="from_subject" placeholder="Subject" required>
+                                    <div class="invalid-feedback">
+                                        Please enter a subject heading
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-col col-lg-6">
+                                <div class="mb-3">                            
+                                    <textarea class="contact-input form-control" name="message" id="message" cols="30" rows="7" placeholder="Message" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Please enter a message
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input class="submit-btn btn btn-outline-light" type="submit" value="Send Message">
+                    </form>
                 </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" name="message" id="message" cols="30" rows="10"></textarea>
-                </div>
-                <input class="btn btn-light" type="submit" value="Send">
-            </form>
+            </div>
         </div>
     </section>
-    
+    <script src="contact.js"></script>
 </body>
 <footer id="footer">
     <div>
