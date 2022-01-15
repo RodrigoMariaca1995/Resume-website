@@ -48,7 +48,7 @@
                     </div>
                     <div class="card info-card">
                         <i class="info-icon fas fa-envelope"></i>
-                        <p>rodrigomariaca@hotmail.com</p>
+                        <p>rodrigo.m.mariaca@gmail.com</p>
                     </div>
                 </div>
                 <div class="info-col col"> 
@@ -85,13 +85,23 @@
                                 </div>
                             </div>
                         </div>
-                        <input class="submit-btn btn btn-outline-light" type="submit" value="Send Message">
+                        <div class="row">
+                            <div class="info-col col-lg-6">
+                                <div class="g-recaptcha" data-sitekey="6LclMhMeAAAAAGQgoxeqbqxHSxNYLstEuDjFyC5V" data-callback="verifyCaptcha" data-theme="dark"></div>
+                                <div id="g-recaptcha-error"></div>
+                            </div>
+                            <div class="info-col col-lg-6">
+                                <input class="submit-btn btn btn-outline-light" type="submit" value="Send Message">
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- reCAPTCHA -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <!-- Sweet Alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
@@ -100,7 +110,7 @@
     <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/integration
-            emailjs.init("user_uKN53fbK4UlG7ZeiZOqzx");
+            emailjs.init("user_LcwNEGCTmeEI6EGQTG8dn");
         })();
     </script>
     <script src="contact.js"></script>
